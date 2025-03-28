@@ -107,6 +107,8 @@
 
 ////////       Object.assign() Method-shallow copy
 
+
+
 //////////  It's a shallow copy
 //////////  It copies properties from one or more source objects to a target object. The target object is returned.
 //////////  It does not copy properties from prototype chain. It only copies own properties.
@@ -215,22 +217,129 @@
 
 
 
-const books={
-    name : "DSA",
-    author : "Sagar",
-    price : 1000,
-    pages : 1000,
-    colors : ["black", "white", "blue"],
+// const books={
+//     name : "DSA",
+//     author : "Sagar",
+//     price : 1000,
+//     pages : 1000,
+//     colors : ["black", "white", "blue"],
+// }
+
+
+// const bookcopy= JSON.parse(JSON.stringify(books))
+
+
+
+// bookcopy.name = "Javascript"
+// console.log("1", bookcopy.name) // printeing changed clone name
+// console.log("2", books.name) //printing original name
+
+
+
+
+
+
+
+
+
+
+//////  2.30.20 hr
+
+
+
+
+
+  
+////////////////// Shallow object
+// const userDetails1 = {
+//     name: "John Doe",
+//     age: 14,
+//     verified: false
+//   };
+  
+
+
+
+/////////// Deep object (object inside object)
+//   //////////// (2 levels deep)
+// const userDetails = {
+//     name: "John Doe",
+//     age: 14,
+//     status: {         // another object inside object 2 levels
+//       verified: false,
+//     }
+//   };
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//shallow copy with spread operator proof
+
+
+// const userDetails = {
+//     name: "John Doe",
+//     age: 14,
+//     status: {         // another object inside object 2 levels
+//       verified: false,
+//     }
+//    };
+   
+   
+//    const copy1 = {...userDetails};
+//    copy1.name = "Sagar";
+//    console.log(userDetails.name)
+//    copy1.status.verified = true;
+   
+   
+//    console.log(userDetails.status.verified);//there's a change in original obj 
+   
+   
+// console.log(copy1.status.verified) //true-> it's a shallow copy.
+
+
+
+
+///////////   spread operator only does seperate cloneing at level 1 key value pairs only . not on nested object .
+
+
+
+
+
+
+
+const userDetails = {
+    name: "John Doe",
+    age: 14,
+    status: {  
+           
+      verified: false,
+      origin : {
+country: "India",
+      }
+    }
+   
 }
 
-
-const bookcopy= JSON.parse(JSON.stringify(books))
-
-
-
-bookcopy.name = "Javascript"
-console.log("1", bookcopy.name) // printeing changed clone name
-console.log("2", books.name) //printing original name
+console.log("1", userDetails.status.verified);
+const copylevel2=Object.assign({},userDetails)
+copylevel2.status.verified = "true";
+console.log("2", copylevel2.status.verified);
+console.log("3", userDetails.status.verified);
 
 
 
@@ -271,6 +380,106 @@ console.log("2", books.name) //printing original name
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/// PRACTICES Sallow and deep copy
+
+
+// const cars= {
+//     brsnk : "BMW",
+//     model : "X5",
+//     year : 2020,
+//     color : "black",
+//     price : 1000000000,
+//     owner : "Sagar"
+// }
+
+
+
+// const copycar = JSON.parse(JSON.stringify(cars))
+
+// console.log("1", copycar.model)
+// console.log("2", cars.model)
+// copycar.model = "X8";
+// console.log("3", copycar.model)
+// console.log("4", cars.model)
+// console.log("5", copycar.model)
+
+
+
+
+
+// const mobile = {
+//     brand : "Samsung",
+//     model : "Galaxy S21",
+//     price : 100000,
+//     colors : ["black", "white", "blue"],
+//     owner : "Sagar"
+// }
+
+// console.log("1", mobile.brand)
+
+// const mobilecopy = Object.assign({},mobile)
+// mobilecopy.brand = "Iphone";
+// console.log("2", mobilecopy.brand)
+// console.log("3", mobile.brand)
+
+
+
+
+
+
+// const laptop = {
+//     brand : "Dell",
+//     model : "i5 13 generation",
+//     price : 100000,
+//     colors : ["black", "white", "blue"],
+//     owner : "Sagar"
+// }
+
+// console.log("1", laptop.brand)
+// const laptopcopy = {...laptop}
+// laptopcopy.brand = "HP";
+// console.log("2", laptopcopy.brand)
+// console.log("3", laptop.brand)
 
 
 

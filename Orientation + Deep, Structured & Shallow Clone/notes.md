@@ -95,6 +95,9 @@ let clone = JSON.parse(JSON.stringify(userDetails))
 
 
 
+Q) what is shallow copy ?
+
+--> Asuming there is a deep object and you do make changes in deep object/ nested object , now if you try to access the original object it will get changes .
 
 
 
@@ -115,6 +118,66 @@ let clone = JSON.parse(JSON.stringify(userDetails))
 
 
 
+/////////////Shallow Copy
+-->A shallow copy is a copy of an object where only the first level of properties is duplicated, while nested objects (or arrays) are still referenced rather than copied.
+
+Example in JavaScript:
+javascript
+Copy
+Edit
+const obj1 = {
+    name: "Alice",
+    age: 25,
+    address: {
+        city: "New York",
+        country: "USA"
+    }
+};
+
+// Creating a shallow copy using Object.assign
+const obj2 = Object.assign({}, obj1);
+
+// Modifying the nested object
+obj2.address.city = "Los Angeles";
+
+console.log(obj1.address.city); // "Los Angeles" (also changed in obj1)
+console.log(obj2.address.city); // "Los Angeles"
+Why does this happen?
+The address object inside obj1 is not deeply copied.
+
+-->Both obj1 and obj2 share the same reference for address, so modifying obj2.address.city also affects obj1.address.city.
+
+Methods to Create a Shallow Copy in JavaScript
+Object.assign({}, obj)
+
+Spread operator { ...obj }
+
+Array.prototype.slice() (for arrays)
+
+Array.prototype.concat() (for arrays)
+
+
+
+
+
+
+
+
+
+When to Use a Shallow Copy?
+->When you only need to copy primitive values at the top level.
+
+->When nested objects don't need to be separated from the original reference.
+
+
+
+
+
+
+
+
+
+If you need a true copy where nested objects are also duplicated, you need a deep copy (e.g., using structuredClone(obj) or JSON.parse(JSON.stringify(obj))). 
 
 
 
@@ -130,12 +193,4 @@ let clone = JSON.parse(JSON.stringify(userDetails))
 
 
 
-
-
-
-
-
-
-
-
-
+///////////////   Complete    ////////////////////

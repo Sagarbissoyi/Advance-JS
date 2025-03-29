@@ -61,6 +61,33 @@
 
 
 
+///////////  Call Method
+
+--> Call is a function that helps you change the context of the invoking function. In layperson's terms, it helps you replace the value of this inside a function with whatever value you want.
+
+
+
+
+
+
+
+
+
+--> Apply method - Only difference we pass arguments in arrayList/array that's it.
+
+--> (Function borrowing and directly invoking)
+
+
+let name = {
+  firstname : "Paul",
+  lastname : "Phoenix",
+}
+
+let printfullname = function(place){
+  console.log(this.firstname + " " + this.lastname + " " + place);
+}
+
+printfullname.apply(name,["haryana"]); //haryana passed in arrayList.
 
 
 
@@ -85,6 +112,39 @@
 
 
 
+///////////What is this?
+
+--> In JavaScript, the this keyword refers to an object.
+
+--> The this keyword refers to different objects depending on how it is used:
+
+--> In an object method, this refers to the object.
+Alone, this refers to the global object.
+
+
+--> In a function, this refers to the global object.
+
+--> In a function, in strict mode, this is undefined.
+
+--> In an event, this refers to the element that received the event.
+
+
+--> Methods like call(), apply(), and bind() can refer this to any object.
+
+
+ ////////   Note
+--> this is not a variable. It is a keyword. You cannot change the value of this.
+
+
+
+--> this in a Method
+--> When used in an object method, this refers to the object.
+
+
+--> In the example on top of this page, this refers to the person object.
+
+
+--> Because the fullName method is a method of the person object.
 
 
 
@@ -94,3 +154,17 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////   2.00.00 hr

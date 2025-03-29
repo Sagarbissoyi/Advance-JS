@@ -6,33 +6,19 @@
 
 
 
+///////////////////       Shallow Copy
+A shallow copy of an object creates a new object with a new reference, but it doesn’t create copies of nested objects within the original object. Instead, it retains references to those nested objects. As a result, changes made to the properties of the nested objects in the shallow copy will also affect the original object and vice versa.
+
+
+
+/////////////////          Deep Copy
+A deep copy of an object creates a completely independent copy of the object, including all nested objects. In other words, it duplicates the entire object hierarchy, ensuring that changes made to the copied object do not affect the original object and vice versa.
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+✅ Deep copy ka matlab hota hai ki original data bilkul bhi change nahi hoga, chahe aap copied data me kuch bhi modify karein.
+✅ Shallow copy ka matlab hota hai ki agar copied object ke andar koi nested object hai, toh uska reference same rehega, aur original bhi change ho sakta hai. 🚀
 
 
 

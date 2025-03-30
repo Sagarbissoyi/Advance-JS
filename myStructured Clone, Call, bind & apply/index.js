@@ -256,6 +256,29 @@
 
 
 
+///recap
+
+// name ={
+//     firstname : "Sagar",
+//     lastname : "Gupta"
+// }
+
+// copyname = function(){
+//     console.log(this.firstname + " " + this.lastname)
+// }
+
+
+// copyname.call(name)
+
+
+
+// name2={
+//     firstname: "vivek",
+//     lastname: "gupta"
+// }
+
+
+// copyname.call(name2)
 
 
 
@@ -263,6 +286,47 @@
 
 
 
+
+
+////////////////    APPLY METHOD  (vv Important)
+
+
+// let name={
+//     fname:"sagar",
+//     lname:"gupta"
+// }
+//  let namecopy=function(country){
+//     console.log(this.fname+ " " + this.lname + " " + "form" + " "+country)
+//  }
+
+
+
+// namecopy.apply(name,["india"]) 
+
+
+
+
+
+
+
+//////////////   BIND METHOD (vv Important)
+
+
+let name={
+    fname:"sagar",
+    lname:"bissoyi"
+}
+
+
+
+let namecopy = function(place){
+    console.log(this.fname+ " " + this.lname + " " + "from" + " " + place)
+}
+
+let fun = namecopy.bind(name,"Nabarangpur"+" " +"Odisha")
+
+
+fun()
 
 
 

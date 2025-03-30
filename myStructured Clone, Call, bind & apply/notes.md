@@ -73,10 +73,16 @@
 
 
 
---> Apply method - Only difference we pass arguments in arrayList/array that's it.
+//////// Apply method   (Vv Important)
+
+
+--> Only difference we pass arguments in arrayList/array that's it.
 
 --> (Function borrowing and directly invoking)
 
+
+
+/////    ex-1
 
 let name = {
   firstname : "Paul",
@@ -92,10 +98,20 @@ printfullname.apply(name,["haryana"]); //haryana passed in arrayList.
 
 
 
+//////////ex-2
+
+
+let name={
+    fname:"sagar",
+    lname:"gupta"
+}
+ let namecopy=function(country){
+    console.log(this.fname+ " " + this.lname + " " + "form" + " "+country)
+ }
 
 
 
-
+namecopy.apply(name,["india"]) 
 
 
 
@@ -153,6 +169,28 @@ Alone, this refers to the global object.
 
 
 
+///////////    BIND METHOD   (Vv imp)
+
+--> Bind method just returns a new function than can be invoked latter
+
+
+
+
+
+////////////ex-1
+
+let name ={ 
+  fname:"sagar"
+  Lname:"bissoyi"
+
+}
+
+let copyname = function(place){
+  console.log(this.firstname + " " + Lname+ "" + place)
+}
+
+let fun =copyname.bind(name,"odisha")
+fun()
 
 
 
@@ -161,10 +199,3 @@ Alone, this refers to the global object.
 
 
 
-
-
-
-
-
-
-///////////////////   2.00.00 hr

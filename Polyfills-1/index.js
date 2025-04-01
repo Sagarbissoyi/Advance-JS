@@ -175,3 +175,111 @@ console.log(result);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////////////   Practices ///////////////////
+
+
+
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+
+// let newarr = arr.map(function(value,index){
+//     return value * index ;
+
+// })
+
+
+// console.log(newarr);
+
+
+
+
+
+
+
+
+// let cars = [
+//     {
+//         name : "BMW",
+//         price : 1000000
+//     },
+//     {
+//         name : "Audi",
+//         price : 2000000
+//     },
+//     {
+//         name : "Mercedes",
+//         price : 3000000
+//     },
+//     {
+//         name : "Ferrari",
+//         price : 4000000
+//     },
+//     {
+//         name : "Lamborghini",
+//         price : 5000000
+//     }
+// ]
+
+
+
+// let allcars =cars.map(function(val, index){
+//     return val.price - val.price * 0.1;
+// })
+// ////////  val = each object in the array (e.g., { name: "BMW", price: 1000000 })
+
+// console.log(allcars);
+
+
+
+
+///////////////////////////  Polyfill for map
+
+// const arr = [1, 2, 3, 4, 5];
+
+// ///polyfill for map
+// Array.prototype.map = function(fn){
+//     const resultArray=[];
+//     for(let i=0;i<this.length;i++){
+//         resultArray.push(fn(this[i],i))
+//     }
+//     return resultArray
+// }
+// //////////
+
+
+// const result=arr.map((item,index)=> item+index)
+
+
+// console.log(result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

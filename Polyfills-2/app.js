@@ -142,45 +142,70 @@ console.log(arr.myReduce((total, elem) => total + elem));
 
 /////////////// Filter Prototype:-
 
+// Array.prototype.myFilter = function(callback) {
+//    var arr = [];
+
+
+//    for (let i = 0; i < this.length; i++) {
+//        if (callback.call(this,this[i])) {
+//            arr.push(this[i]);
+//        }
+//    }
+//    return arr;
+// }
+
+
+// const arrData = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+
+// const filteredData = arrData.myFilter((element) => {
+//    return (element % 2 === 0);
+// });
+
+
+// console.log(filteredData); // Should print: [0, 2, 4, 6, 8]
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////  Filter Method:-
+
+
+
+/// Filter Prototype:-
+
+
+
 Array.prototype.myFilter = function(callback) {
-   var arr = [];
-
-
-   for (let i = 0; i < this.length; i++) {
-       if (callback.call(this,this[i])) {
-           arr.push(this[i]);
-       }
-   }
-   return arr;
-}
-
-
-const arrData = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-
-const filteredData = arrData.myFilter((element) => {
-   return (element % 2 === 0);
-});
-
-
-console.log(filteredData); // Should print: [0, 2, 4, 6, 8]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    var arr = [];
+ 
+ 
+    for (let i = 0; i < this.length; i++) {
+        if (callback.call(this,this[i])) {
+                    arr.push(this[i]);
+        }
+    }
+    return arr;
+ }
+ 
+ 
+ const arrData = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+ 
+ 
+ const filteredData = arrData.myFilter((element) => {
+    return (element % 2 === 0);
+ });
+ 
+ 
+ console.log(filteredData); // Should print: [0, 2, 4, 6, 8]
+ 
+ 
+ 

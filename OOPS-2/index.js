@@ -90,30 +90,78 @@
 
 
 
-class nolan{
-    constructor (teddy,statement,verdict){
-        this.name= teddy;
-        this.phase = statement;
-        this.species = "Superhero";
-        this.power = "100";
-        this.fly = verdict;
-    }
-    printAll = () => {
-        console.log(`${this.name} ${this.phase} ${this.species} ${this.power} ${this.fly}`)
-    }
+// class nolan{
+//     constructor (teddy,statement,verdict,superhero,pow){
+//         this.name= teddy;
+//         this.phase = statement;
+//         this.species = "Superhero";
+//         this.power = "100";
+//         this.fly = verdict;
+//     }
+//     printAll = () => {
+//         console.log(`${this.name} ${this.phase} ${this.species} ${this.power} ${this.fly}`)
+//     }
 
 
-}
+// }
 
 
-const superman = new nolan ("DC","SRK","Yes");
+// const superman = new nolan ("DC","SRK","Yes");
 
-const batman = new nolan("Bat","Nolan","No");
+// const batman = new nolan("Bat","Nolan","No");
 
-const ironman = new nolan("Iron","Steve","Yes")
+// const ironman = new nolan("Iron","Steve","Yes")
 
 
 
-superman.printAll()
-batman.printAll();
-ironman.printAll()
+// superman.printAll()
+// batman.printAll();
+// ironman.printAll()
+
+
+
+
+
+
+
+
+
+
+
+// class Car{
+
+//     constructor(brand){
+//         this.carname = brand;
+//     }
+//     static hello(){  /// static method are not property of object . They are property of class.
+
+//         return "Hello!";
+//     }
+
+// }
+
+// mycar = new Car("Ford");
+// console.log(mycar.carname); // Ford
+// // console.log(mycar.hello())    //OBJ /// error
+// console.log(Car.hello())        //class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
